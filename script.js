@@ -3,3 +3,4 @@
 //funções
 
 //eventos
+document.addEventListener('onload', tabuada)
