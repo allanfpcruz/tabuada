@@ -9,6 +9,7 @@ function tabuada() {
     for(let i = 1; i <= 10; i++) {
         const tabuadaHeader = document.createElement('li')
         tabuadaHeader.setAttribute('class', 'tabuada-header')
+        tabuadaHeader.classList.add('tabuada-list')
         tabuadaContainer.appendChild(tabuadaHeader)
         tabuadaHeader.innerHTML = `Tabuada do ${i}`
         const tabuadaList = document.createElement('ul')
@@ -25,6 +26,7 @@ function tabuada() {
 function gerarTabuada() {
     const tabuadaTitle = document.createElement('ul')
     tabuadaTitle.setAttribute('class', 'tabuada-header')
+    tabuadaTitle.classList.add('tabuada-list')
     resContent.appendChild(tabuadaTitle)
     tabuadaTitle.innerHTML = `tabuada do ${inputNumber.value}`
     for(let i = 1; i <= 10; i++) {
