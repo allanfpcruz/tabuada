@@ -16,16 +16,24 @@ h1 {
 }
 
 #container {
-    display: grid;
-    grid-template-columns: 2fr minmax(200px, 1fr);
+    display: flex;
+    align-items: start;
 }
 
 #tabuada, #gerador-tabuada {
     background-color: lightgray;
     margin: 10px;
     padding: 5px;
-    border-radius: 0 5px;
+    border-radius: 5px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.466);
+}
+
+#tabuada {
+    flex: 1 1 auto;
+}
+
+#tabuada h2 {
+    margin: 10px 10px 0px 10px;
 }
 
 #tabuada-container {
@@ -34,30 +42,123 @@ h1 {
 }
 
 .tabuada-list {
-    background-color: gray;
+    background-color: darkgray;
     margin: 10px;
     padding: 10px;
     list-style-type: none;
     border-radius: 5px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.466);
 }
 
 .tabuada-list li {
     list-style-type: none;
 }
 
-.tabuada-item {
-
+.tabuada-header {
+    list-style-type: none;
+    font-weight: bold;
+    padding-bottom: 10px;
 }
 
 #gerador-tabuada {
     flex: 0 1 200px;
+    width: 200px;
     background-color: lightgray;
 }
 
+#result {
+    display: flex;
+    flex-flow: wrap row;
+}
+
+.generated-tabuada {
+    flex: 1 1 auto;
+}
+
+#form {
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+#form h2 {
+    margin: 0 0 10px 0;
+}
+
 #input-num {
+    box-sizing: border-box;
     width: 80%;
 }
 
+#input-num:focus-within {
+    outline: none;
+}
+
 #search {
-    height: 1.5rem;
+    cursor: pointer;
+    display: inline-block;
+    background-color: darkgray;
+}
+
+#input-num, #search {
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    display: inline-block;
+}
+
+#reset {
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: darkgray;
+}
+
+#reset:hover, #search:hover {
+    border: 1px solid gray;
+    padding: 4px;
+}
+
+.none {
+    display: none;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer p a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        display: block;
+    }
+
+    #gerador-tabuada {
+        width: 92%;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    #container {
+        width: 1000px;
+        margin: auto;
+    }
 }
