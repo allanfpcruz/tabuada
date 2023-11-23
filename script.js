@@ -43,6 +43,8 @@ function gerarTabuada() {
 }
 
 function limparTabuada() {
+    inputNumber.value = ""
+    reset.classList.add('none')
     const generatedTabuada = document.querySelectorAll('.generated-tabuada')
     generatedTabuada.forEach(tabuada => {
         tabuada.classList.add('none')
